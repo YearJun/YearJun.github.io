@@ -1,29 +1,65 @@
-﻿<html lang="ZH-CN">
+﻿<!DOCTYPE html>
+<html lang="ZH-CN">
 	<head>
 		<meta charset="utf-8">
 		<audio src="music/Minecraft.ogg" autoplay="autoplay" type="audio/ogg" loop="loop"></audio>
 		<!--↑设置BGM autoplay是立即播放 后面的type是声明该音频的类型 因为有些浏览器无法播放ogg-->
-		<title>YearJun的个人主页</title>
+		<title>Welcome to YearHome！</title>
+		
+		
+		<style type="text/css">	
+		
+			.SiteTitle {
+				position:relative;
+				left: -8px;
+				
+				width: 1398px;
+				
+				background-color: WhiteSmoke;
+				opacity:0.88;
+				filter:alpha(opacity=88);             /* IE8 及更早版本 */
+					}
+					
+			.BGMtext {
+				color: #2e7632;
+				position:relative;        /*滑动浏览器时，它也会跟着滑动*/
+				right: -1100px;
+					}
+			
+			.ReturnToTop {
+				border-radius: 50%;      /*以椭圆形显示*/
+				
+				position: fixed;         /*以fixed定位是固定的，网页滑动时它不会滑动*/
+				top: 535px;
+				right: 10px;
+						}
+						
+		</style>
+		
+		
 	</head>
 	
+	<!--↑第一个是设置背景图片 第二个是关闭图片填补 第三个是图片适应网站的大小 第四个是图片不会随着页面的滚动而滚动-->
 	<body style=
-	"background-image: url(images/背景.png);
+	"background-image: url(images/背景.jpg);
 	 background-repeat:no-repeat;
 	 background-size:cover;
 	 background-attachment:fixed;"
 	>
-	<!--↑第一个是设置背景图片 第二个是关闭图片填补 第三个是图片适应网站的大小 第四个是图片不会随着页面的滚动而滚动-->
 	
-		<div id="SiteTitle">           <!--网站标题-->
-			<center>
-				<font color="#45e36f" size="20"><b>YearJun</b></font>
-				<font color="#1fa88e" size="20">的个人主页</font>
-			</center>
+	
+		<div class="SiteTitle">           <!--网站标题-->
+			<font color="#45e36f" size="20"><b>&emsp;Year</b></font>      <!--&emsp;是空格的特殊代码-->
+			<font color="#1fa88e" size="20">Home</font></br>
+			<font class=BGMtext size="5">BGM：C418 - Minecraft</font>
 		</div>
 		
-		<a href="https://minecraft.net">
-			<img src="images/返回顶部.png" width="70" height="100" title="回到顶部" style="background-color:#e6e6e6;">
+		
+		<!--返回顶部-->
+		<a href="https://minecraft.net" >
+			<img class=ReturnToTop src="images/返回顶部.jpg" width="100" height="100" title="回到顶部">
 		</a>
+		
 		
 	</body>
 </html>
