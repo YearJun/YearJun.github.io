@@ -1,7 +1,22 @@
 ﻿<!DOCTYPE html>
 <html lang="ZH-CN">
+	<!--
+	
+		请问你为什么要翻源代码呢？
+		难道你是想学习HTML吗？
+		还是说你想翻翻源代码找找彩蛋呢？
+		那么我很抱歉，因为这里只有一个很无聊的彩蛋。
+		蛤？你问这一串话是什么？
+		这串话就是彩蛋呀！
+		awa
+		
+	-->
 	<head>
+		<link rel="icon" href="images/Icon.ico" type="image/x-icon">                  <!--设置网页图标-->
+		<link rel="shortcut icon" href="images/Icon.ico" type="image/x-icon">         <!--设置网页在收藏夹里显示的图标-->
+		
 		<meta charset="utf-8">
+		<meta name="author" content="YearJun">                  <!--定义页面作者-->
 		<audio src="music/Minecraft.ogg" autoplay="autoplay" type="audio/ogg" loop="loop"></audio>
 		<!--↑设置BGM autoplay是立即播放 后面的type是声明该音频的类型 因为有些浏览器无法播放ogg-->
 		<title>Welcome to YearHome！</title>
@@ -9,27 +24,43 @@
 		
 		<style type="text/css">	
 		
-			.SiteTitle {
+			.SiteTitle {               /*网站标题*/
 				position:relative;
 				left: -8px;
 				
 				width: 1398px;
 				
 				background-color: WhiteSmoke;
-				opacity:0.88;
-				filter:alpha(opacity=88);             /* IE8 及更早版本 */
+				opacity:0.88;                    /*设置透明度*/
+				filter:alpha(opacity=88);             /*设置透明度（IE8 及更早版本）*/
 					}
 					
-			.BGMtext {
+					
+			.BGMtext {               /*BGM文本*/
 				color: #2e7632;
 				position:relative;        /*滑动浏览器时，它也会跟着滑动*/
-				right: -1100px;
+				left: 200px;
 					}
+					
+					
+			.LeftInfo {         /*左侧信息栏*/
+				background-color: WhiteSmoke;
+				opacity:0.88;
+				filter:alpha(opacity=88);
+				
+				width: 160px;
+				height: 500px;
+				
+				position: fixed;                    /*以fixed定位是固定的，网页滑动时它不会滑动*/
+				top: 170px;
+				
+					}
+					
 			
-			.ReturnToTop {
+			.ReturnToTop {            /*返回顶部*/
 				border-radius: 50%;      /*以椭圆形显示*/
 				
-				position: fixed;         /*以fixed定位是固定的，网页滑动时它不会滑动*/
+				position: fixed;         
 				top: 535px;
 				right: 10px;
 						}
@@ -48,15 +79,38 @@
 	>
 	
 	
-		<div class="SiteTitle">           <!--网站标题-->
+		<div class="SiteTitle" id="SiteTitle">           <!--网站标题-->
 			<font color="#45e36f" size="20"><b>&emsp;Year</b></font>      <!--&emsp;是空格的特殊代码-->
 			<font color="#1fa88e" size="20">Home</font></br>
-			<font class=BGMtext size="5">BGM：C418 - Minecraft</font>
+			<font class=BGMtext size="5">
+				网站内测中！
+			
+				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+				
+				BGM：C418 - Minecraft
+			</font>
 		</div>
 		
+		<!--左侧信息栏-->
+		<div class="LeftInfo">
+			<center><font size="6" color="green" style="position:relative; top: 110px;">YearJun</font></center>
+		</div>
+		
+		<!--左侧头像-->
+		<center>
+			<img src="images/头像.png" style="
+				border-radius: 10%;
+				position:fixed;
+				left: 38px;
+				top: 175px;
+				width: 100px;">
+		</center>
 		
 		<!--返回顶部-->
-		<a href="https://minecraft.net" >
+		<a href="#SiteTitle" >
 			<img class=ReturnToTop src="images/返回顶部.jpg" width="100" height="100" title="回到顶部">
 		</a>
 		
